@@ -84,10 +84,10 @@ def retrieve_information(variant_ids):
             else:
                 effects_str = ','.join(effects)
 
-            if not transcript_ids:
-                transcript_ids_str = 'Not available'
-            else:
-                transcript_ids_str = ','.join(transcript_ids)
+            # if not transcript_ids:
+            #     transcript_ids_str = 'Not available'
+            # else:
+            #     transcript_ids_str = ','.join(transcript_ids)
 
             if not genes:
                 genes_str = 'Not available'
