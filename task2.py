@@ -12,7 +12,7 @@ try:
     # multiplies the %gc values by 100 to convert to percentages
     df['%gc'] = df['%gc'] * 100
 
-    # group intervals into %gc bins and calculate the mean target coverage for each bin by adding a new column 'gc_bin' using pd.cut
+    # group intervals into %gc bins by adding a new column 'gc_bin' using pd.cut and calculate the mean target coverage for each bin
     df['gc_bin'] = pd.cut(df['%gc'], bins)
     mean_coverage_by_bin = df.groupby('gc_bin')['mean_coverage'].mean()
 
