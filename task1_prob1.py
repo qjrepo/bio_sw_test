@@ -1,7 +1,7 @@
 import os
 from Bio import SeqIO
 
-# Recursively find all files with the extension .fastq
+# Recursively find all files with the extension .fastq in the directory
 def findAllFastqFiles(directory, extension):
     filenames = []
     for path, dirnames, files in os.walk(directory):
@@ -11,7 +11,7 @@ def findAllFastqFiles(directory, extension):
                 filenames.append(filename)
     return filenames
 
-#Iterate through the files and find the percent of sequences in the file that are 30 nucleotides long
+#Iterate through the files and find the percent of sequences in the file that are more than 30 nucleotides long
 def fastaSeq(filenames):
     res = []
     for filename in filenames:
