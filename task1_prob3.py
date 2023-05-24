@@ -63,7 +63,7 @@ def main(chromo):
     
     # create the output file
     result = open('output.txt', 'w')
-    # iterate over the coordinates and find the gene name that input position overlaps
+    # iterate over the coordinates and find the gene name that input position overlaps in the gtf_dict
     # and output to a file output.txt
     for position in coordinates:
         gene_name = ''
