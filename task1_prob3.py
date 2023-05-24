@@ -55,13 +55,16 @@ def main(chromo):
 
     # output = []
 
-    #create gtf dict for the chromosome using chromosome_dict
+    # create gtf dict for the chromosome using chromosome_dict
     gtf_dict = parseGTF(filename_gtf, chromo)
 
+    # look up and get the coordinates for the input chromosome from the chromosome_dict dictionary
     coordinates = chromosome_dict[chromo]
     
-    #create the output file
+    # create the output file
     result = open('output.txt', 'w')
+    # iterate over the coordinates and find the gene name that input position overlaps
+    # and output to a file output.txt
     for position in coordinates:
         gene_name = ''
         for (start, end), name in gtf_dict.items():
